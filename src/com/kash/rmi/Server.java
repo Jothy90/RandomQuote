@@ -36,10 +36,10 @@ public class Server implements Quote {
 
             // Bind the remote object's stub in the registry
             Registry registry = LocateRegistry.getRegistry();
-            registry.bind("com.kash.rmi.Quote", stub);
-            System.err.println("com.kash.rmi.Server ready");
+            registry.bind("Quote", stub);
+            System.err.println("Server ready");
         } catch (Exception e) {
-            System.err.println("com.kash.rmi.Server exception: " + e.toString());
+            System.err.println("Server exception: " + e.toString());
             e.printStackTrace();
             System.exit(0);
         }
